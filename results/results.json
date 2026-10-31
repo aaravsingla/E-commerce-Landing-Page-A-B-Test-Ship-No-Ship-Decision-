@@ -1,0 +1,114 @@
+{
+  "data_quality": {
+    "raw_rows": 294478,
+    "mismatched_assignment_rows": 3893,
+    "duplicated_users": 3894,
+    "clean_users": 290584,
+    "rows_dropped_pct": 1.32,
+    "first_event": "2017-01-02 13:42:05.378582",
+    "last_event": "2017-01-24 13:41:54.460509",
+    "n_days": 23
+  },
+  "srm": {
+    "control_users": 145274,
+    "treatment_users": 145310,
+    "chi2": 0.004,
+    "p_value": 0.9468,
+    "srm_detected": false
+  },
+  "power": {
+    "baseline_rate": 0.12039,
+    "mde_absolute_pp": 0.34,
+    "mde_relative_pct": 2.83,
+    "sample_needed": {
+      "1pct_relative_lift": {
+        "users_per_arm": 1151908,
+        "days_at_current_traffic": 174.4
+      },
+      "2pct_relative_lift": {
+        "users_per_arm": 289207,
+        "days_at_current_traffic": 43.8
+      },
+      "5pct_relative_lift": {
+        "users_per_arm": 46859,
+        "days_at_current_traffic": 7.1
+      }
+    }
+  },
+  "frequentist": {
+    "control_rate": 0.12039,
+    "treatment_rate": 0.11881,
+    "abs_diff_pp": -0.158,
+    "rel_lift_pct": -1.31,
+    "z": -1.311,
+    "p_two_sided": 0.1899,
+    "p_one_sided_new_better": 0.9051,
+    "wald_ci_pp": [
+      -0.394,
+      0.078
+    ],
+    "bootstrap_ci_pp": [
+      -0.392,
+      0.078
+    ]
+  },
+  "bayesian": {
+    "p_treatment_better": 0.0948,
+    "expected_loss_if_ship_pp": 0.1631,
+    "credible_interval_pp": [
+      -0.393,
+      0.077
+    ]
+  },
+  "peeking_simulation": {
+    "days": 23,
+    "fpr_fixed_horizon_pct": 4.25,
+    "fpr_daily_peeking_pct": 26.48
+  },
+  "segments": {
+    "per_country": [
+      {
+        "country": "CA",
+        "control_rate": 0.11878,
+        "treatment_rate": 0.1119,
+        "abs_diff_pp": -0.688,
+        "p_raw": 0.1947,
+        "p_holm": 0.3968,
+        "significant_after_holm": false
+      },
+      {
+        "country": "UK",
+        "control_rate": 0.12002,
+        "treatment_rate": 0.12117,
+        "abs_diff_pp": 0.115,
+        "p_raw": 0.6349,
+        "p_holm": 0.6349,
+        "significant_after_holm": false
+      },
+      {
+        "country": "US",
+        "control_rate": 0.12063,
+        "treatment_rate": 0.11847,
+        "abs_diff_pp": -0.216,
+        "p_raw": 0.1323,
+        "p_holm": 0.3968,
+        "significant_after_holm": false
+      }
+    ],
+    "interaction_lr_test": {
+      "chi2": 2.465,
+      "df": 2,
+      "p_value": 0.2916
+    },
+    "treatment_odds_ratio": 0.9852,
+    "treatment_or_ci": [
+      0.9633,
+      1.0075
+    ]
+  },
+  "novelty": {
+    "days_used": 21,
+    "slope_pp_per_day": -0.013,
+    "slope_p_value": 0.5345
+  }
+}
